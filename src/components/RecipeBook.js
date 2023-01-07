@@ -1,8 +1,25 @@
 import Recipe from "./Recipe";
 
-const RecipeBook = () => {
+const RecipeBook = (recipeArray) => {
+
+    console.log(recipeArray);
     return (
-        <Recipe/>
+        <section>
+            <ul>
+                {
+                    recipeArray.map((myRecipe)=>{
+                        return <Recipe 
+                            image= {myRecipe.image}
+                            title= {myRecipe.title}
+                            missing= {myRecipe.missedIngredients}
+                        />
+                    })
+                }
+            </ul>
+
+
+
+        </section>
     );
 }
 
