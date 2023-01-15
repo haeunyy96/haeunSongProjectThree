@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Neucha&display=swap');
 
 html {
   background-color: #d23839;
@@ -7,6 +9,45 @@ html {
 
 }
 body {
-  font-family: 'Oleo Script Swash Caps', cursive;
+  /* font-family: 'Oleo Script Swash Caps', cursive; */
+  font-family: 'Neucha', cursive;
   font-size: 2rem;
+}
+
+h1 {
+  font-family: 'Londrina Outline', cursive;
+}
+
+.recipeBook {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.recipe {
+  width: 30%;
+}
+
+input {
+  border: none;
+  border-radius: 4px 4px;
+  font-size: 1.5rem;
+  padding: 5px;
+  font-family: 'Neucha', cursive;
+  margin-top: 20px;
+}
+.textInput {
+  margin-right: 10px;
+  width: 50%;
+}
+.button {
+  padding: 5px 20px;
+  
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  
 }

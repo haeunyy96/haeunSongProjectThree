@@ -5,7 +5,7 @@ const RecipeBook = ({recipeArray}) => {
     console.log(recipeArray);
     return (
         <section>
-            <ul>
+            <ul className="recipeBook">
                 {
                     recipeArray.map((myRecipe)=>{
                         return <Recipe 
@@ -13,6 +13,7 @@ const RecipeBook = ({recipeArray}) => {
                             image= {myRecipe.image}
                             title= {myRecipe.title}
                             missing= {myRecipe.missedIngredients}
+
                         />
                     })
                 }

@@ -1,6 +1,8 @@
-const Missing = () => {
+const Missing = ({list}) => {
     return (
         <>
+            <p>{list}</p>
+
         </>
     )
 }

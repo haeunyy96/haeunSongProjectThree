@@ -1,16 +1,22 @@
 import Missing from "./Missing";
 
 const Recipe = ({key, image, title, missing}) => {
-    console.log(key, image, title, missing);
-
-    // const [thingsToBuy, setThingsToBuy] = useState([missing]);
-
-    // missing = setThingsToBuy;
+    // console.log(missing);
     return (
-        <li>
-            <img src={image} />
+
+        <li key={key} className="recipe">
+            <img src={image} alt={title} />
             <h2>{title}</h2>
-            {/* <Missing buy={thingsToBuy}/> */}
+            <h4>You need to buy:
+                {
+                    missing.map((toBuy) => {
+                        return <Missing
+                            list={toBuy.name}
+                        />
+                    })
+                }
+            </h4>
+
         </li>
     )
 }
