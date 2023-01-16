@@ -1,8 +1,10 @@
 const Missing = ({list}) => {
     return (
-        <>
-            <p>{list}</p>
-
+        <> 
+        <label class="">
+            <input type="checkbox"></input>
+                {list} <br></br>
+        </label>
         </>
     )
 }

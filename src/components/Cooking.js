@@ -23,6 +23,7 @@ const Cooking = () => {
         url.search = new URLSearchParams ({
             apiKey: "ce490440f832431a9cdb9e690f75de8b",
             ingredients: userInput,
+            limitLicense: true,
             number: 10
         })
 
@@ -44,6 +45,11 @@ const Cooking = () => {
         api();
     }
 
+    // const display = document.querySelector(".loading")
+
+    // function displayNone () {
+    //     display.
+    // }
     return (
         <section>
             <Form handleClick={addIngredient} />

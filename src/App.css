@@ -37,11 +37,3 @@
   }
 }
 
-.recipeBook {
-  display: flex;
-  list-style: none;
-}
-
-.recipe {
-  width: 30%;
-}

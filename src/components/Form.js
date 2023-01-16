@@ -1,6 +1,6 @@
 // 1. import useState 
 import { useState } from "react";
-
+import img from "../assets/pot.gif";
 
 const Form = ({handleClick}) => {
 
@@ -13,12 +13,25 @@ const Form = ({handleClick}) => {
     }
 
     return (
-        <form action="">
-            <label>Enter your ingredients separated by commas! </label>
-            <br></br>
-            <input type="text" class="textInput" placeholder="ex. mushroom, onion" onChange={handleChange} value={chosenIngr}></input>
-            <input type="submit" class="button" onClick={e => { handleClick(e, chosenIngr) }}></input>
-        </form>
+        <section>
+            <form action="">
+                <label>Enter your ingredients separated by commas! </label>
+                <br></br>
+                <input type="text" class="textInput" placeholder="ex. mushroom, onion" onChange={handleChange} value={chosenIngr}></input>
+                <input type="submit" class="button" onClick={e => { handleClick(e, chosenIngr) }}></input>
+            </form>
+            {/* <div class="loading">
+                <div class="progress">
+                    <div class="color">
+                        <h4>LOADING...</h4>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+                <img class="pot" src={img} alt="image of pot boiling"></img>
+            </div> */}
+        </section>
     );
 }
 
