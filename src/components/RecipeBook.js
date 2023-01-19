@@ -10,7 +10,8 @@ const RecipeBook = ({recipeArray}) => {
                 {
                     recipeArray.map((myRecipe)=>{
                         return <Recipe 
-                            key = {myRecipe.id}
+                            key= {myRecipe.id}
+                            id= {myRecipe.id}
                             image= {myRecipe.image}
                             title= {myRecipe.title}
                             missing= {myRecipe.missedIngredients}

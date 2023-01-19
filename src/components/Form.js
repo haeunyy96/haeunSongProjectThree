@@ -5,7 +5,7 @@ import img from "../assets/pot.gif";
 const Form = ({handleClick}) => {
 
     // 2. initialize state
-    const [chosenIngr, setChosenIngr] = useState(null);
+    const [chosenIngr, setChosenIngr] = useState('');
 
     const handleChange = (event) => {
         // console.log(event.target.value);
@@ -15,21 +15,21 @@ const Form = ({handleClick}) => {
     return (
         <section>
             <form action="">
-                <label>Enter your ingredients separated by commas! </label>
+                <label>Enter your ingredients separated by a comma! </label>
                 <br></br>
-                <input type="text" class="textInput" placeholder="ex. mushroom, onion" onChange={handleChange} value={chosenIngr}></input>
-                <input type="submit" class="button" onClick={e => { handleClick(e, chosenIngr) }}></input>
+                <input type="text" className="textInput" placeholder="ex. tomato, cheese" onChange={handleChange} value={chosenIngr}></input>
+                <input type="submit" className="button" onClick={e => { handleClick(e, chosenIngr) }}></input>
             </form>
-            {/* <div class="loading">
-                <div class="progress">
-                    <div class="color">
+            {/* <div className="loading">
+                <div className="progress">
+                    <div className="color">
                         <h4>LOADING...</h4>
                     </div>
                 </div>
             </div>
             <div>
 
-                <img class="pot" src={img} alt="image of pot boiling"></img>
+                <img className="pot" src={img} alt="image of pot boiling"></img>
             </div> */}
         </section>
     );

@@ -9,7 +9,7 @@ import { useState } from "react";
 const Cooking = () => {
     // 2. initialize state to hold the data from the API
     const [newRecipes, setNewRecipes] = useState([]);
-
+    const [recipeLink, setrecipeLink] = useState({});
     // create a second state to capture user input
     const [userInput, setUserInput] = useState();
 
@@ -21,10 +21,11 @@ const Cooking = () => {
         // console.log(url);
         // add params to the url
         url.search = new URLSearchParams ({
-            apiKey: "ce490440f832431a9cdb9e690f75de8b",
+            // apiKey: "ce490440f832431a9cdb9e690f75de8b",
+            apiKey: "ae04a816ca574350af40a091c219b089",
             ingredients: userInput,
             limitLicense: true,
-            number: 10
+            number: 2
         })
 
         await fetch(url)
@@ -34,6 +35,7 @@ const Cooking = () => {
             .then((data) => {
                 // console.log(data);
                 setNewRecipes(data);
+
             })
 
         };

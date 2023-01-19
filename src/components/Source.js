@@ -1,15 +1,8 @@
-import SourceLink from "./SourceLink";
 const Source = ({source}) => {
+    const text = (source.summary).replace(/<[^>]*>/g, '');
     return (
         <>
-        {
-            source.map((newLink)=>{
-                return <SourceLink
-                finalUrl = {newLink.sourceUrl}
-                />
-            })
-
-        }
+        <p className="summary">{text}</p>
         </>
     );
 }

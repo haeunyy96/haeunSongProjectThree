@@ -1,46 +1,45 @@
 import Missing from "./Missing";
 import Source from "./Source";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
-const Recipe = ({key, image, title, missing}) => {
-
-    // WHY AREN'T YOU RETURNING ANYTHINGGGG
-    console.log(key);
+const Recipe = ({id, image, title, missing}) => {
     
-    const [recipeLink, setrecipeLink]= useState(null);
+    const [recipeLink, setrecipeLink]= useState({});
+    const [recipeInfo, setrecipeInfo]= useState({});
+    // console.log(id)
+    useEffect(()=>{
 
-    async function api() {
-        const newUrl = 'https://api.spoonacular.com/recipes/' + { title } + '/information';
+        const newUrl = new URL(`https://api.spoonacular.com/recipes/${id}/information`);
+            console.log(newUrl);
 
-        console.log(newUrl);
-
-        newUrl.search = new URLSearchParams({
-            apiKey: "ce490440f832431a9cdb9e690f75de8b",
-        })
-
-        await fetch(newUrl)
-            .then((response) => {
-                return response.json();
+            newUrl.search = new URLSearchParams({
+                apiKey: "ae04a816ca574350af40a091c219b089",
             })
-            .then((data) => {
-                // console.log(data);
-                setrecipeLink(data);
-            })
+            fetch(newUrl)
+                .then((response) => {
+                    return response.json();
+                })
+                .then((data) => {
+                    console.log(data);
+                    setrecipeLink(data.sourceUrl);
+                    setrecipeInfo(data);
+                })
 
-    };
+    },[id])
 
-    api();
     return (
 
-        <li key={key} className="recipe">
+        <li key={id} className="recipe">
             <div className="recipeImg">
-                <img class="photo" src={image} alt={title} />
-                <h2>{title}</h2>
-                <p> <Source source={recipeLink}/> </p>
+                <img className="photo" src={image} alt={title} />
+                <h2>{title}</h2>   
+                <button className="linkBtn"><a className="link" href={recipeLink}>Go to Recipe 🍽️</a></button>
             </div>
             <div className="recipeText"> 
-
+                <div>
+                    <Source source={recipeInfo}/>
+                </div>
                 <h4>You need to buy : </h4>
                 <h5>
                     {
