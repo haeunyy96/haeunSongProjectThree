@@ -8,6 +8,7 @@ html {
   text-align: center;
 
 }
+
 body {
   /* font-family: 'Oleo Script Swash Caps', cursive; */
   font-family: 'Neucha', cursive;
@@ -25,12 +26,19 @@ h2 {
 h4 {
   text-align: left;
   margin: 0;
+  padding-top: 20px;
   font-size: 1.8rem;
   text-decoration-skip-ink: none;
   text-decoration: #cc6264 wavy underline;
   /* font-family: 'Londrina Outline', cursive; */
 }
 
+h6 {
+  font-family: 'Raleway';
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
 h5 {
   text-align: left;
   margin: 0;
@@ -54,7 +62,7 @@ h5 {
   background-color: #ede1d7;
   color: #cc6264;
   border-radius: 10px 10px;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
   margin-bottom: 20px;
 }
 
@@ -154,9 +162,15 @@ button:focus {
   border-radius: 15px;
   animation: progres 4s infinite linear;
 }
+.summaryDiv {
+  height: 40%;
+  overflow: scroll;
+  overflow: overlay;
+}
 .summary {
   font-family: 'Raleway';
   font-size: 1rem;
+  text-align: left;  
 }
 
 @keyframes progres {
@@ -183,4 +197,13 @@ button:focus {
 
 footer {
   font-size: 1.3rem;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #cc9562;
+}
+.groceryList {
+  display: inline-block;
+  margin: 0;
 }
