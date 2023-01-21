@@ -9,10 +9,10 @@ const Cooking = () => {
     async function api () {
         const url = new URL('https://api.spoonacular.com/recipes/findByIngredients');
         url.search = new URLSearchParams ({
-            // apiKey: "ce490440f832431a9cdb9e690f75de8b",
+            apiKey: "ce490440f832431a9cdb9e690f75de8b",
             // apiKey: "ae04a816ca574350af40a091c219b089",
             // apiKey: "aad01ceb54a9479592f55feb0f1502b3",
-            apiKey: "667f3f639407497bb32d9f02c53752bc",
+            // apiKey: "667f3f639407497bb32d9f02c53752bc",
             ingredients: userInput,
             limitLicense: true,
             number: 2
@@ -23,6 +23,7 @@ const Cooking = () => {
             })
             .then((data) => {
                 setNewRecipes(data);
+                console.log(data);
             })
 
         };

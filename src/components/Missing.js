@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
-import List from "./List";
 import firebase from "../firebase";
 
 const Missing = ({list}) => {
-    const [saveList, setSaveList] = useState('');
+    // const [saveList, setSaveList] = useState('');
     const handleClick = (event) => {
         console.log(event.target.value);
-        setSaveList(event.target.value);
+        // setSaveList(event.target.value);
         // array.push(event.target.value);
         // console.log(array);
     };
@@ -30,7 +29,7 @@ const Missing = ({list}) => {
             <input type="checkbox" value={list} onClick={(e)=>{handleClick(e)}} />
                 <p className="groceryList">{list}</p> <br></br>
         </label>
-        <List sendList={saveList}/>
+        {/* <List sendList={saveList}/> */}
         </>
     )
 }

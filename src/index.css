@@ -21,7 +21,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  margin: 0;
+  margin: 10px 0;
 }
 h4 {
   text-align: left;
@@ -37,7 +37,7 @@ h6 {
   font-family: 'Raleway';
   font-size: 1.2rem;
   text-align: center;
-  margin: 20px 0 10px 0;
+  margin: 0;
 }
 h5 {
   text-align: left;
@@ -46,18 +46,17 @@ h5 {
 .recipeBook {
   display: flex;
   list-style: none;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
-  width: 80%;
+  width: 90%;
   align-items: center;
   margin: 0 auto;
   margin-top: 30px;
 }
 
 .recipe {
-  width: 100%;
-  display: flex;
+  width: 44%;
+  /* display: flex; */
   justify-content: space-between;
   background-color: #ede1d7;
   color: #cc6264;
@@ -65,17 +64,18 @@ h5 {
   padding: 20px 20px 0 20px;
   margin-bottom: 20px;
 }
-
+hr {
+  border-style: dotted;
+  border-top: none;
+  width: 20%;
+}
 .recipeImg {
-  width: 45%;
+  width: 100%;
 }
 .photo {
   border-radius: 5%;
   border: 10px solid #cc6264;
-  width: 100%;
-}
-.recipeText {
-  width: 45%;
+  width: 95%;
 }
 input {
   border: none;
@@ -101,7 +101,6 @@ button:focus {
   border: none;
   background-color: #cc6264;
   border-radius: 6px 6px;
-  margin-top: 10px;
   padding: 10px 30px;
 }
 
@@ -114,6 +113,9 @@ button:focus {
   margin-right: 10px;
   width: 50%;
   padding-left: 10px;
+}
+.btnDiv {
+  padding-top: 10px;
 }
 .button {
   padding: 5px 20px;
@@ -163,7 +165,7 @@ button:focus {
   animation: progres 4s infinite linear;
 }
 .summaryDiv {
-  height: 40%;
+  /* max-height: 200px; */
   overflow: scroll;
   overflow: overlay;
 }
@@ -171,8 +173,23 @@ button:focus {
   font-family: 'Raleway';
   font-size: 1rem;
   text-align: left;  
+  margin-top: 0;
+  height: 10%;
+  /* overflow-y: scroll; */
 }
-
+.triangle {
+  background-color: transparent;
+  border: none;
+}
+.triangle img {
+  width: 20%;
+}
+.readMore {
+  color: #cc6264;
+  font-weight: bold;
+  margin-bottom: -10px;
+  font-size: 1rem;
+}
 @keyframes progres {
   0% {
     width: 0%;
@@ -203,7 +220,20 @@ input:checked+p {
   text-decoration: line-through;
   text-decoration-color: #cc9562;
 }
+
 .groceryList {
   display: inline-block;
   margin: 0;
+  font-family: 'Raleway';
+  font-size: 1.2rem;
+}
+
+.groceryBtn {
+  color: #ede1d7;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Raleway',
+    sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0px;
 }
