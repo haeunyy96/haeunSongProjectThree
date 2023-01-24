@@ -1,27 +1,44 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap'); */
-
-@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Neucha&family=Raleway:wght@100;400&display=swap');
-
-html {
-  background-color: #cc6264;
-  color: #ede1d7;
-  text-align: center;
-
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=Montserrat&family=Zilla+Slab:wght@300&display=swap');
 
 body {
-  /* font-family: 'Oleo Script Swash Caps', cursive; */
-  font-family: 'Neucha', cursive;
-  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #cc6264;
+  margin: 0;
 }
 
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+header {
+  padding-top: 80px;
+
+}
+.logo {
+  width: 40%;
+}
+nav {
+  background-color: #cc6264;
+  color: #ede1d7;
+  padding: 10px 20px;
+  text-align: right;
+}
+.navButton {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #f3e8e1;
+}
 h1 {
-  font-family: 'Londrina Outline', cursive;
+  font-family: 'Zilla Slab', serif;
+  font-size: 4rem;
+  margin: 20px 0;
 }
-
-h2 {
-  font-size: 2rem;
-  margin: 10px 0;
+.titleSpan {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, #f3e8e1 40%);
 }
 h4 {
   text-align: left;
@@ -30,21 +47,27 @@ h4 {
   font-size: 1.8rem;
   text-decoration-skip-ink: none;
   text-decoration: #cc6264 wavy underline;
-  /* font-family: 'Londrina Outline', cursive; */
 }
 
 h6 {
-  font-family: 'Raleway';
-  font-size: 1.2rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
   text-align: center;
-  margin: 0;
+  margin: 16px 0;
 }
 h5 {
   text-align: left;
-  margin: 0;
+  margin: 0 0 30px 20px;
+  font-weight: 400;
+}
+
+form {
+  padding-bottom: 50px;
 }
 .recipeBook {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
   padding: 0;
@@ -55,42 +78,79 @@ h5 {
 }
 
 .recipe {
-  width: 44%;
-  /* display: flex; */
+  width: 31%;
   justify-content: space-between;
-  background-color: #ede1d7;
+  /* background-color: #ede1d7; */
   color: #cc6264;
-  border-radius: 10px 10px;
-  padding: 20px 20px 0 20px;
-  margin-bottom: 20px;
+  border: 1px solid #cc9562;
+  border-radius: 17px 17px;
+  margin-bottom: 50px;
+
 }
+.recipe:hover,
+.recipe:focus {
+  transform: scale(105%);
+  transition: 0.3s;
+}
+
 hr {
   border-style: dotted;
   border-top: none;
   width: 20%;
 }
+.spanDiv {
+  display: table;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+}
+.recipeTitle {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: normal;
+  font-family: 'Zilla Slab', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 0.07rem;
+  margin: 10px 0;
+  padding: 0 10px;
+  text-transform: uppercase;
+}
+.recipeBox {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cc6264;
+  border-radius: 15px 15px;
+  margin: 5px;
+}
+.recipeBox:hover,
+.recipeBox:focus {
+  background-color: #f3e8e1;  
+}
 .recipeImg {
-  width: 100%;
+  height: 30%;
+}
+.recipeText {
+  height: 70%;
+  padding: 17px;
 }
 .photo {
-  border-radius: 5%;
-  border: 10px solid #cc6264;
-  width: 95%;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 15px 15px 0 0 ;
 }
 input {
   border: none;
   border-radius: 4px 4px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding: 5px;
-  font-family: 'Neucha', cursive;
-  margin-top: 20px;
+  font-family: 'Lato', sans-serif;
 }
 .link {
   text-decoration: none;
   color: #ede1d7;
   font-size: 1.1rem;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
 }
 button:hover,
@@ -101,7 +161,8 @@ button:focus {
   border: none;
   background-color: #cc6264;
   border-radius: 6px 6px;
-  padding: 10px 30px;
+  padding: 8px 30px;
+  margin-top: 20px;
 }
 
 .linkBtn:hover,
@@ -110,28 +171,31 @@ button:focus {
   transition: 0.3s;
 }
 .textInput {
-  margin-right: 10px;
+  margin: 30px 10px 0 0;
   width: 50%;
-  padding-left: 10px;
+  padding: 7px 10px;
+  border: 1px solid #cc6264;
 }
+
 .btnDiv {
   padding-top: 10px;
 }
 .button {
+  background-color: #cc9562;
   padding: 5px 20px;
-  font-family: 'Raleway', sans-serif;
-  text-transform: uppercase;
+  font-family: 'Zilla Slab', serif;
+  color: #ede1d7;
+  border:1px solid #cc9562;
   font-size: 1.1rem;
   padding: 9px 20px;
+  margin: 20px 0;
 }
 
 .button:hover,
 .button:focus {
   cursor: pointer;
-  background-color: #cc9562;
-  color: #ede1d7;
+  transform: scale(110%);
   transition: 0.3s;
-  font-family: 'Raleway', sans-serif;
 }
 .img {
   display: flex;
@@ -145,7 +209,6 @@ button:focus {
   top: 50%;
   left: 39%;
   transform: translate(-50%, -50%);
-  /* margin-left: 30px; */
 }
 
 .progress {
@@ -165,17 +228,16 @@ button:focus {
   animation: progres 4s infinite linear;
 }
 .summaryDiv {
-  /* max-height: 200px; */
+  max-height: 100px;
   overflow: scroll;
   overflow: overlay;
 }
 .summary {
-  font-family: 'Raleway';
+  padding-right: 12px;
   font-size: 1rem;
   text-align: left;  
   margin-top: 0;
   height: 10%;
-  /* overflow-y: scroll; */
 }
 .triangle {
   background-color: transparent;
@@ -186,7 +248,6 @@ button:focus {
 }
 .readMore {
   color: #cc6264;
-  font-weight: bold;
   margin-bottom: -10px;
   font-size: 1rem;
 }
@@ -214,8 +275,12 @@ button:focus {
 
 footer {
   font-size: 1.3rem;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 0;
+  background-color: #cc6264;
+  color: #ede1d7;
 }
-
 input:checked+p {
   text-decoration: line-through;
   text-decoration-color: #cc9562;
@@ -224,7 +289,6 @@ input:checked+p {
 .groceryList {
   display: inline-block;
   margin: 0;
-  font-family: 'Raleway';
   font-size: 1.2rem;
 }
 
@@ -232,8 +296,42 @@ input:checked+p {
   color: #ede1d7;
   font-size: 1.1rem;
   font-weight: bold;
-  font-family: 'Raleway',
-    sans-serif;
+  font-family: 'Lato', sans-serif;
   text-transform: uppercase;
   margin-bottom: 0px;
+}
+
+
+/* media Query */
+
+@media (max-width: 1001px) {
+  .recipe {
+    width: 47%;
+  }
+}
+@media (max-width: 651px) {
+  .recipe {
+    width: 94%;
+  }
+  .recipeBook {
+    justify-content: center;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  label {
+    font-size: 1.4rem;
+  }
+  .logo {
+    width: 65%;
+  }
+  .textInput {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 501px) {
+  h1 {
+    font-size: 3rem;
+  }
+
 }

@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer className="footer">
-            © Haeun Song at Juno College 2022
+            © Haeun Song at Juno College 2023
         </footer>
     )
 }

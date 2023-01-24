@@ -1,30 +1,19 @@
 import { useState } from "react";
-// import img from "../assets/pot.gif";
 const Form = ({handleClick}) => {
-
     const [chosenIngr, setChosenIngr] = useState('');
     const handleChange = (event) => {
         setChosenIngr(event.target.value);
     }
 
     return (
-        <section>
+        <section className="container">
             <form action="">
                 <label>Enter your ingredients separated by a comma! </label>
                 <br></br>
-                <input type="text" className="textInput" placeholder="ex. tomato, cheese" onChange={handleChange} value={chosenIngr}></input>
+                <input type="text" className="textInput" placeholder="ex. tomato, brie" onChange={handleChange} value={chosenIngr}></input>
+                <br></br>
                 <input type="submit" className="button" onClick={e => { handleClick(e, chosenIngr) }}></input>
             </form>
-            {/* <div className="loading">
-                <div className="progress">
-                    <div className="color">
-                        <h4>LOADING...</h4>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img className="pot" src={img} alt="image of pot boiling"></img>
-            </div> */}
         </section>
     );
 }
