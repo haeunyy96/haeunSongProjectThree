@@ -11,7 +11,7 @@ const Recipe = ({id, image, title, missing}) => {
     useEffect(()=>{
         const newUrl = new URL(`https://api.spoonacular.com/recipes/${id}/information`);
             newUrl.search = new URLSearchParams({
-                apiKey: "667f3f639407497bb32d9f02c53752bc"
+                apiKey: "ce490440f832431a9cdb9e690f75de8b"
             })
             fetch(newUrl)
                 .then((response) => {
