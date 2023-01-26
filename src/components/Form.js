@@ -1,9 +1,5 @@
-import { useState } from "react";
-const Form = ({handleClick}) => {
-    const [chosenIngr, setChosenIngr] = useState('');
-    const handleChange = (event) => {
-        setChosenIngr(event.target.value);
-    }
+const Form = ({handleClick, handleChange, chosenIngr}) => {
+
 
     return (
         <section className="container">
