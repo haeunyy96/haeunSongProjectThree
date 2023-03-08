@@ -1,4 +1,6 @@
-Hi there 👋🏽
+<img width="1174" alt="recipe" src="https://user-images.githubusercontent.com/107310198/223765273-a56a77e0-2c67-4ea8-82fb-7fc0bc876394.png">
+
+Hi there 👋
 
 Welcome to my Project Repo!
 
